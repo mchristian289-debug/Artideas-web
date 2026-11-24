@@ -4,6 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ArtIdeas | Muebles a medida para tu hogar</title>
+<meta name="description" content="ArtIdeas fabrica muebles a medida: cocinas, closets, muebles de TV, centros de entretenimiento, mesas de noche, lavamanos y recibidores. Cotiza por WhatsApp.">
+<meta name="theme-color" content="#2E4A3F">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ArtIdeas | Inspira, Crea y Transforma tu Hogar">
+<meta property="og:description" content="Muebles a medida para tu hogar. Cotiza por WhatsApp.">
+<script>document.documentElement.className+=" js"</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -68,12 +74,59 @@ select,input,textarea{width:100%;font:inherit;color:var(--ink);background:var(--
 footer{background:var(--forest);color:var(--on-forest);padding:28px 0;font-size:.9rem}
 @media (max-width:760px){.hero .wrap,.contact{grid-template-columns:1fr}.hero svg{max-width:240px}nav a{margin-left:12px}.btn.ghost{margin:10px 0 0}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.js .reveal.in{opacity:1;transform:none}
+.card{transition:transform .25s ease,box-shadow .25s ease}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(0,0,0,.14)}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.shot{aspect-ratio:4/3;border-radius:12px;overflow:hidden;background:var(--forest);display:grid;place-items:center;color:var(--on-forest);text-align:center;padding:12px;position:relative;margin:0}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.shot small{opacity:.75}
+.about{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}
+.values{display:grid;gap:16px}
+.values div{border-left:3px solid var(--oak);padding-left:14px}
+.values h3{font-size:1.1rem}
+.values p{margin:0;color:var(--muted)}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:10px}
+.faq summary{cursor:pointer;font-weight:600}
+.faq p{margin:10px 0 0;color:var(--muted)}
+.banner{border:2px dashed var(--oak);border-radius:14px;padding:32px;text-align:center;background:var(--surface)}
+.banner h3{font-size:1.4rem;margin-bottom:8px}
+.banner p{margin:0 auto 18px;max-width:52ch;color:var(--muted)}
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.quote{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;margin:0}
+.quote p{margin:0 0 10px}
+.quote cite{font-style:normal;font-weight:600;color:var(--muted)}
+.wa{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:6;background:#25D366;color:#10281A;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.3)}
+.wa svg{width:28px;height:28px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:760px){.about{grid-template-columns:1fr}}
+@media (max-width:560px){nav a:not(:last-child){display:none}}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}.card{transition:none}.card:hover{transform:none}}
+.thumb{border:0;width:100%;height:190px;cursor:pointer;padding:0;overflow:hidden;position:relative;color:var(--on-forest);font:inherit}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb .ver{position:absolute;bottom:8px;right:10px;font-size:.8rem;background:rgba(0,0,0,.5);color:#fff;padding:2px 10px;border-radius:999px}
+.modal{position:fixed;inset:0;z-index:20;background:rgba(10,16,13,.82);display:grid;place-items:center;padding:16px;padding-top:calc(16px + env(safe-area-inset-top,0px))}
+.modal[hidden]{display:none}
+.m-box{position:relative;background:var(--surface);border-radius:14px;width:min(900px,100%);max-height:100%;overflow:auto}
+.m-stage{position:relative;aspect-ratio:16/10;background:var(--forest);color:var(--on-forest);text-align:center}
+.m-img{width:100%;height:100%;display:grid;place-items:center}
+.m-img img{width:100%;height:100%;object-fit:contain;background:#0B120F}
+.m-close{position:absolute;top:10px;right:10px;z-index:2;width:40px;height:40px;border-radius:50%;border:0;background:rgba(0,0,0,.6);color:#fff;font-size:1.5rem;line-height:1;cursor:pointer}
+.m-nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;background:rgba(0,0,0,.6);color:#fff;font-size:1.7rem;line-height:1;cursor:pointer}
+.m-prev{left:10px}.m-next{right:10px}
+.m-info{padding:16px 20px 96px}
+.m-info p{color:var(--muted);margin:6px 0 12px}
+.m-thumbs{display:flex;gap:8px;flex-wrap:wrap}
+.m-thumbs button{width:72px;height:54px;border:2px solid var(--line);border-radius:8px;padding:0;overflow:hidden;cursor:pointer;background:var(--forest)}
+.m-thumbs button[aria-current="true"]{border-color:var(--oak)}
+.m-thumbs img{width:100%;height:100%;object-fit:cover;display:block}
+.m-cotizar{position:absolute;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:3;border-radius:999px;padding:14px 24px;box-shadow:0 6px 18px rgba(0,0,0,.4)}
 </style>
 </head>
 <body>
 <header class="top"><div class="wrap">
   <a class="logo" href="#inicio">Art<span>Ideas</span></a>
-  <nav><a href="#catalogo">Catálogo</a><a href="#proceso">Proceso</a><a href="#contacto">Contacto</a></nav>
+  <nav><a href="#catalogo">Catálogo</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a></nav>
 </div></header>
 
 <main>
@@ -93,7 +146,7 @@ footer{background:var(--forest);color:var(--on-forest);padding:28px 0;font-size:
 
 <section id="catalogo"><div class="wrap">
   <h2>Nuestros muebles</h2>
-  <p class="sub">Todo se fabrica a medida. Elige una línea para ver ejemplos y pide tu cotización.</p>
+  <p class="sub">Todo se fabrica a medida. Haz clic en un mueble para ver las fotos de nuestros trabajos.</p>
   <div class="chips" id="chips" role="group" aria-label="Filtrar por línea"></div>
   <div class="grid" id="lista"></div>
 </div></section>
@@ -108,7 +161,36 @@ footer{background:var(--forest);color:var(--on-forest);padding:28px 0;font-size:
     <li><h3>Instalación</h3><p>Llevamos e instalamos el mueble listo para usar.</p></li>
   </ol>
   <h3 style="margin-top:40px;font-size:1.2rem">Materiales y acabados</h3>
-  <div class="mats"><span>Melamínico</span><span>MDF enchapado</span><span>Madera sólida</span><span>Lacado</span><span>Granito Natural</span><span>Cuarzo</span><span>Piedra sinterizada</span><span>Aglomerado RH</span><span>Herrajes de cierre suave</span></div>
+  <div class="mats"><span>Melamínico</span><span>MDF enchapado</span><span>Madera sólida</span><span>Lacado</span><span>Herrajes de cierre suave</span></div>
+</div></section>
+
+<section id="nosotros" class="band"><div class="wrap about">
+  <div>
+    <h2>Sobre ArtIdeas</h2>
+    <p class="sub">Somos un taller que diseña y fabrica muebles para el hogar. Cada pieza se hace según el espacio, el estilo y el presupuesto de quien la pide.</p>
+    <a class="btn" href="#contacto">Hablemos de tu proyecto</a>
+  </div>
+  <div class="values">
+    <div><h3>A tu medida</h3><p>Tomamos medidas y adaptamos cada mueble a tu espacio.</p></div>
+    <div><h3>Diseño contigo</h3><p>Eliges materiales, colores y acabados antes de fabricar.</p></div>
+    <div><h3>Fabricación propia</h3><p>Hacemos los muebles en nuestro taller.</p></div>
+  </div>
+</div></section>
+
+<section id="testimonios"><div class="wrap">
+  <h2>Lo que dicen nuestros clientes</h2>
+  <p class="sub">Comentarios de quienes ya tienen un mueble ArtIdeas.</p>
+  <div id="comentarios"></div>
+</div></section>
+
+<section id="preguntas" class="band"><div class="wrap faq">
+  <h2>Preguntas frecuentes</h2>
+  <p class="sub">Lo que más nos preguntan antes de pedir un mueble.</p>
+  <details><summary>¿Cuánto tarda en estar listo mi mueble?</summary><p>Depende del tipo de mueble y de su tamaño. Te damos el tiempo exacto en la cotización.</p></details>
+  <details><summary>¿Los muebles se hacen a la medida?</summary><p>Sí. Todos los muebles se fabrican según las medidas de tu espacio.</p></details>
+  <details><summary>¿Incluyen la instalación?</summary><p>Sí, llevamos e instalamos el mueble listo para usar.</p></details>
+  <details><summary>¿Cómo puedo pagar?</summary><p>Las formas de pago y el anticipo se acuerdan en la cotización.</p></details>
+  <details><summary>¿Cómo pido una cotización?</summary><p>Escríbenos por WhatsApp o llena el formulario de contacto con el mueble que buscas y las medidas aproximadas.</p></details>
 </div></section>
 
 <section id="contacto"><div class="wrap contact">
@@ -137,6 +219,21 @@ footer{background:var(--forest);color:var(--on-forest);padding:28px 0;font-size:
   </div>
 </div></section>
 </main>
+
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="m-titulo">
+  <div class="m-box">
+    <button type="button" class="m-close" id="m-close" aria-label="Cerrar">×</button>
+    <div class="m-stage">
+      <div class="m-img" id="m-img"></div>
+      <button type="button" class="m-nav m-prev" id="m-prev" aria-label="Foto anterior">‹</button>
+      <button type="button" class="m-nav m-next" id="m-next" aria-label="Foto siguiente">›</button>
+    </div>
+    <div class="m-info"><h3 id="m-titulo"></h3><p id="m-desc"></p><div class="m-thumbs" id="m-thumbs"></div></div>
+  </div>
+  <a class="btn m-cotizar" id="m-cotizar" href="#contacto" target="_blank" rel="noopener">Cotizar este mueble</a>
+</div>
+
+<a class="wa" id="wa" href="#contacto" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l1.7-5A9 9 0 1 1 8 19.3z"/></svg></a>
 
 <footer><div class="wrap">© 2026 ArtIdeas. Inspira, Crea y Transforma tu Hogar.</div></footer>
 
@@ -169,6 +266,14 @@ var DATOS=[
 ];
 var $=function(id){return document.getElementById(id)};
 var actual="";
+// Fotos de cada mueble: sube una carpeta "fotos" al repositorio y escribe aquí las rutas.
+// El nombre debe ser igual al del mueble. Ejemplo:
+// FOTOS["Cocina integral completa"]=["fotos/cocina1.jpg","fotos/cocina2.jpg"];
+var FOTOS={};
+function thumbInner(d){
+  var f=(FOTOS[d.n]||[])[0];
+  return (f?'<img src="'+f+'" alt="'+d.n+'" loading="lazy">':'<svg viewBox="0 0 24 24" aria-hidden="true">'+ICONOS[d.l]+'</svg>')+'<span class="ver">Ver fotos</span>';
+}
 var chips=$("chips");
 ["Todos"].concat(LINEAS).forEach(function(l){
   var b=document.createElement("button");b.type="button";b.className="chip";b.textContent=l;
@@ -184,9 +289,9 @@ function pintar(){
   var r=DATOS.filter(function(d){return !actual||d.l===actual});
   $("lista").innerHTML=r.map(function(d){
     var msg=encodeURIComponent("Hola ArtIdeas, quiero cotizar: "+d.n);
-    return '<article class="card"><div class="thumb"><svg viewBox="0 0 24 24" aria-hidden="true">'+ICONOS[d.l]+'</svg></div>'+
+    return '<article class="card"><button type="button" class="thumb" data-n="'+DATOS.indexOf(d)+'" aria-label="Ver fotos de '+d.n+'">'+thumbInner(d)+'</button>'+
       '<div class="body"><span class="tag">'+d.l+'</span><h3>'+d.n+'</h3><p>'+d.d+'</p>'+
-      '<a class="btn" href="https://wa.me/'+WHATSAPP+'?text='+msg+'" target="_blank" rel="noopener">Cotizar este mueble</a></div></article>';
+      '<button type="button" class="btn" data-n="'+DATOS.indexOf(d)+'">Ver galería</button></div></article>';
   }).join("");
 }
 $("form").addEventListener("submit",function(e){
@@ -198,6 +303,60 @@ $("form").addEventListener("submit",function(e){
   $("aviso").textContent="Abrimos WhatsApp con tu mensaje.";
 });
 pintar();
+
+// Ventana flotante con la galería de cada mueble
+var modal=$("modal"),cur=0,fotos=[],mi=0,ultimoFoco=null;
+function mostrarFoto(){
+  $("m-img").innerHTML=fotos.length?'<img src="'+fotos[mi]+'" alt="'+DATOS[cur].n+', foto '+(mi+1)+'">':'<div><strong>'+DATOS[cur].n+'</strong><br><small>Fotos próximamente</small></div>';
+  $("m-prev").hidden=$("m-next").hidden=fotos.length<2;
+  Array.prototype.forEach.call($("m-thumbs").children,function(b,k){b.setAttribute("aria-current",k===mi?"true":"false")});
+}
+function abrir(i){
+  cur=i;mi=0;fotos=FOTOS[DATOS[i].n]||[];
+  $("m-titulo").textContent=DATOS[i].n;$("m-desc").textContent=DATOS[i].d;
+  $("m-thumbs").innerHTML=fotos.length>1?fotos.map(function(f,k){return '<button type="button" data-k="'+k+'" aria-label="Ver foto '+(k+1)+'"><img src="'+f+'" alt=""></button>'}).join(""):"";
+  $("m-cotizar").href="https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent("Hola ArtIdeas, quiero cotizar: "+DATOS[i].n);
+  ultimoFoco=document.activeElement;
+  modal.hidden=false;document.body.style.overflow="hidden";
+  mostrarFoto();$("m-close").focus();
+}
+function cerrar(){modal.hidden=true;document.body.style.overflow="";if(ultimoFoco){ultimoFoco.focus()}}
+function paso(d){if(fotos.length>1){mi=(mi+d+fotos.length)%fotos.length;mostrarFoto()}}
+$("lista").addEventListener("click",function(e){var b=e.target.closest("[data-n]");if(b){abrir(+b.getAttribute("data-n"))}});
+$("m-close").addEventListener("click",cerrar);
+$("m-prev").addEventListener("click",function(){paso(-1)});
+$("m-next").addEventListener("click",function(){paso(1)});
+$("m-thumbs").addEventListener("click",function(e){var b=e.target.closest("[data-k]");if(b){mi=+b.getAttribute("data-k");mostrarFoto()}});
+modal.addEventListener("click",function(e){if(e.target===modal){cerrar()}});
+document.addEventListener("keydown",function(e){
+  if(modal.hidden){return}
+  if(e.key==="Escape"){cerrar()}
+  if(e.key==="ArrowLeft"){paso(-1)}
+  if(e.key==="ArrowRight"){paso(1)}
+});
+
+// Comentarios de clientes: agrega aquí cada comentario, por ejemplo {n:"Nombre",c:"Ciudad",t:"Comentario del cliente"}
+var TESTIMONIOS=[];
+(function(){
+  var c=$("comentarios");
+  if(TESTIMONIOS.length){
+    c.className="quotes";
+    c.innerHTML=TESTIMONIOS.map(function(q){return '<blockquote class="quote"><p>“'+q.t+'”</p><cite>'+q.n+(q.c?' · '+q.c:'')+'</cite></blockquote>'}).join("");
+    return;
+  }
+  var msg=encodeURIComponent("Hola ArtIdeas, quiero dejar mi comentario sobre mi mueble.");
+  c.innerHTML='<div class="banner"><h3>Aquí irán los comentarios de nuestros clientes</h3><p>¿Ya tienes un mueble ArtIdeas? Cuéntanos cómo te fue y lo publicamos en esta sección.</p><a class="btn" href="https://wa.me/'+WHATSAPP+'?text='+msg+'" target="_blank" rel="noopener">Dejar mi comentario</a></div>';
+})();
+
+$("wa").href="https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent("Hola ArtIdeas, quiero cotizar un mueble.");
+
+var io="IntersectionObserver" in window?new IntersectionObserver(function(es){
+  es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}});
+},{threshold:.1}):null;
+Array.prototype.forEach.call(document.querySelectorAll("section .wrap"),function(el){
+  el.classList.add("reveal");
+  if(io){io.observe(el)}else{el.classList.add("in")}
+});
 </script>
 </body>
 </html>
