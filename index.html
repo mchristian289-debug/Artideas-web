@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ArtIdeas | Muebles a medida para tu hogar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#ECEEEA;--surface:#fff;--ink:#1E2421;--muted:#55605A;--forest:#2E4A3F;--oak:#C79A5B;--line:#D3D9D3;--on-forest:#F1F3EE;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141A17;--surface:#1D2621;--ink:#E8EDE8;--muted:#A3AFA7;--forest:#1B2D26;--line:#2E3C35;--on-forest:#F1F3EE}}
+:root[data-theme="dark"]{--bg:#141A17;--surface:#1D2621;--ink:#E8EDE8;--muted:#A3AFA7;--forest:#1B2D26;--line:#2E3C35;--on-forest:#F1F3EE}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.6 "Instrument Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",Georgia,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--oak);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--forest);color:var(--on-forest)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font:800 2rem "Bricolage Grotesque",sans-serif;text-decoration:none;letter-spacing:-.02em}
+.logo span{color:var(--oak)}
+nav a{margin-left:20px;text-decoration:none;font-weight:500;font-size:.95rem}
+nav a:hover{text-decoration:underline}
+.hero{background:radial-gradient(900px 420px at 85% 0%,rgba(199,154,91,.30),transparent 60%),repeating-linear-gradient(90deg,rgba(0,0,0,.20) 0 3px,rgba(255,255,255,.035) 3px 46px),linear-gradient(135deg,#17261F,#2E4A3F 55%,#17261F);color:var(--on-forest);padding:72px 0 88px;border-bottom:4px solid var(--oak)}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.brand{font:800 clamp(3.6rem,12vw,7.5rem)/1 "Bricolage Grotesque",sans-serif;letter-spacing:-.035em;margin:0 0 16px}
+.brand span{color:var(--oak)}
+.hero h1{font-size:clamp(1.5rem,3.4vw,2.3rem);font-weight:600;max-width:24ch}
+.hero p{max-width:50ch;font-size:1.1rem;opacity:.88;margin:20px 0 28px}
+.btn{background:var(--oak);color:#1E2421;border:0;border-radius:8px;padding:12px 22px;font:600 1rem "Instrument Sans",sans-serif;cursor:pointer;text-decoration:none;display:inline-block;text-align:center}
+.btn:hover{filter:brightness(.95)}
+.btn.ghost{background:transparent;color:inherit;border:1.5px solid currentColor;margin-left:10px}
+.hero svg{width:100%;max-width:380px;justify-self:center;stroke:var(--oak);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+section{padding:64px 0}
+section h2{font-size:clamp(1.7rem,4vw,2.5rem);margin-bottom:8px}
+.sub{color:var(--muted);margin:0 0 24px;max-width:60ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.chip{background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font:500 .92rem "Instrument Sans",sans-serif;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--forest);color:var(--on-forest);border-color:var(--forest)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.thumb{height:150px;display:grid;place-items:center;background:var(--forest)}
+.thumb svg{width:84px;height:84px;stroke:var(--oak);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.card .body{padding:16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.tag{font-size:.85rem;font-weight:600;color:var(--muted)}
+.card p{margin:0;color:var(--muted);font-size:.93rem}
+.card .btn{margin-top:auto;font-size:.9rem;padding:9px 14px}
+.band{background:var(--surface);border-block:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px;counter-reset:p;list-style:none;padding:0;margin:0}
+.steps li{counter-increment:p;border-top:3px solid var(--oak);padding-top:14px}
+.steps li::before{content:counter(p);font:800 1.6rem "Bricolage Grotesque",sans-serif;color:var(--forest)}
+@media (prefers-color-scheme:dark){.steps li::before{color:var(--oak)}}
+.steps h3{font-size:1.15rem;margin:4px 0 6px}
+.steps p{margin:0;color:var(--muted)}
+.mats{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.mats span{border:1px solid var(--line);border-radius:8px;padding:8px 14px;background:var(--bg)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+form{display:grid;gap:14px}
+label{font-size:.85rem;font-weight:600;color:var(--muted);display:block;margin-bottom:4px}
+select,input,textarea{width:100%;font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px}
+.social{display:flex;flex-wrap:wrap;gap:12px}
+.social a{display:inline-flex;align-items:center;gap:10px;padding:10px 18px;border:1px solid var(--line);background:var(--bg);border-radius:999px;text-decoration:none;font-weight:600}
+.social a:hover{background:var(--forest);color:var(--on-forest)}
+.social svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+footer{background:var(--forest);color:var(--on-forest);padding:28px 0;font-size:.9rem}
+@media (max-width:760px){.hero .wrap,.contact{grid-template-columns:1fr}.hero svg{max-width:240px}nav a{margin-left:12px}.btn.ghost{margin:10px 0 0}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="#inicio">Art<span>Ideas</span></a>
+  <nav><a href="#catalogo">Catálogo</a><a href="#proceso">Proceso</a><a href="#contacto">Contacto</a></nav>
+</div></header>
+
+<main>
+<div class="hero" id="inicio"><div class="wrap">
+  <div>
+    <div class="brand">Art<span>Ideas</span></div>
+    <h1>Inspira, Crea y Transforma tu Hogar</h1>
+    <p>Fabricamos muebles a la medida de tu espacio: cocinas, closets, muebles de TV, centros de entretenimiento, mesas de noche, lavamanos y más.</p>
+    <a class="btn" href="#contacto">Pedir cotización</a><a class="btn ghost" href="#catalogo">Ver catálogo</a>
+  </div>
+  <svg viewBox="0 0 200 160" aria-hidden="true">
+    <rect x="10" y="10" width="180" height="36"/><path d="M100 10v36M10 28h0"/>
+    <rect x="10" y="86" width="180" height="48"/><path d="M10 104h180M100 104v30"/>
+    <path d="M10 134v14M190 134v14"/><path d="M60 62h80"/>
+  </svg>
+</div></div>
+
+<section id="catalogo"><div class="wrap">
+  <h2>Nuestros muebles</h2>
+  <p class="sub">Todo se fabrica a medida. Elige una línea para ver ejemplos y pide tu cotización.</p>
+  <div class="chips" id="chips" role="group" aria-label="Filtrar por línea"></div>
+  <div class="grid" id="lista"></div>
+</div></section>
+
+<section id="proceso" class="band"><div class="wrap">
+  <h2>Cómo trabajamos</h2>
+  <p class="sub">De tu idea al mueble instalado en casa.</p>
+  <ol class="steps">
+    <li><h3>Cuéntanos tu idea</h3><p>Nos dices qué mueble necesitas, el espacio y tu presupuesto.</p></li>
+    <li><h3>Diseño y medidas</h3><p>Tomamos medidas y te mostramos el diseño con materiales y colores.</p></li>
+    <li><h3>Fabricación</h3><p>Cortamos, armamos y acabamos cada pieza en nuestro taller.</p></li>
+    <li><h3>Instalación</h3><p>Llevamos e instalamos el mueble listo para usar.</p></li>
+  </ol>
+  <h3 style="margin-top:40px;font-size:1.2rem">Materiales y acabados</h3>
+  <div class="mats"><span>Melamínico</span><span>MDF enchapado</span><span>Madera sólida</span><span>Lacado</span><span>Granito Natural</span><span>Cuarzo</span><span>Piedra sinterizada</span><span>Aglomerado RH</span><span>Herrajes de cierre suave</span></div>
+</div></section>
+
+<section id="contacto"><div class="wrap contact">
+  <div>
+    <h2>Cuéntanos qué mueble quieres</h2>
+    <p class="sub">Te respondemos por WhatsApp con una cotización.</p>
+    <p><strong>WhatsApp:</strong> +57 302 370 2886<br><strong>Correo:</strong> Jdnava2323@gmail.com<br><strong>Taller:</strong> Barranquilla, Colombia</p>
+  </div>
+  <form id="form" novalidate>
+    <div><label for="nombre">Nombre</label><input id="nombre" required autocomplete="name"></div>
+    <div><label for="linea">Mueble de interés</label><select id="linea"></select></div>
+    <div><label for="mensaje">Mensaje</label><textarea id="mensaje" rows="4" placeholder="Medidas aproximadas, color o material que te gusta"></textarea></div>
+    <button class="btn" type="submit">Enviar por WhatsApp</button>
+    <small id="aviso" role="status" style="color:var(--muted)"></small>
+  </form>
+</div></section>
+<section id="redes" class="band"><div class="wrap">
+  <h2>Síguenos en redes</h2>
+  <p class="sub">Mira nuestros trabajos terminados y las novedades del taller.</p>
+  <div class="social">
+    <a href="https://www.instagram.com/@Artideasjn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>Instagram</a>
+    <a href="https://www.facebook.com/TU_PAGINA" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg>Facebook</a>
+    <a href="https://www.tiktok.com/@josedavidnavarroz" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v11a3.5 3.5 0 1 1-3.5-3.5M14 3c0 3 2 5 5 5"/></svg>TikTok</a>
+    <a href="https://www.youtube.com/@TU_CANAL" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z"/></svg>YouTube</a>
+    <a href="https://wa.me/573023702886" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l1.7-5A9 9 0 1 1 8 19.3z"/></svg>WhatsApp</a>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">© 2026 ArtIdeas. Inspira, Crea y Transforma tu Hogar.</div></footer>
+
+<script>
+var WHATSAPP="573023702886";
+var LINEAS=["Cocinas","Closets","Centros de entretenimiento","Muebles de TV","Centros de mesa","Mesas de noche","Lavamanos de sobreponer","Recibidores de sala"];
+var ICONOS={
+ "Cocinas":'<rect x="3" y="3" width="18" height="7"/><path d="M12 3v7M3 14h18v7H3zM3 17h18M12 17v4"/>',
+ "Centros de entretenimiento":'<rect x="3" y="3" width="18" height="18"/><rect x="8" y="6" width="8" height="6"/><path d="M3 15h18M12 15v6"/>',
+ "Muebles de TV":'<rect x="4" y="3" width="16" height="9"/><path d="M3 15h18v4H3zM5 19v2M19 19v2"/>',
+ "Centros de mesa":'<rect x="3" y="9" width="18" height="3"/><path d="M6 12v8M18 12v8"/>',
+ "Mesas de noche":'<rect x="6" y="5" width="12" height="13"/><path d="M6 11h12M10 8h4M10 14.5h4M8 18v3M16 18v3"/>',
+ "Lavamanos de sobreponer":'<path d="M4 8c0 3 3 5 8 5s8-2 8-5zM12 3v5M12 3h4"/><rect x="4" y="15" width="16" height="6"/><path d="M12 15v6"/>',
+ "Recibidores de sala":'<rect x="4" y="9" width="16" height="3"/><path d="M6 12v8M18 12v8M8 5h8v4"/>',
+ "Closets":'<rect x="4" y="3" width="16" height="18"/><path d="M12 3v18M9 11v2M15 11v2M4 17h16"/>'};
+var DATOS=[
+ {n:"Cocina con muebles superiores",l:"Cocinas",d:"Gabinetes de pared con puertas de cierre suave y repisas internas."},
+ {n:"Cocina con muebles inferiores",l:"Cocinas",d:"Gabinetes de piso con cajones, zócalo y espacio para mesón."},
+ {n:"Cocina integral completa",l:"Cocinas",d:"Superiores e inferiores diseñados juntos, a la medida de tu cocina."},
+ {n:"Centro de entretenimiento",l:"Centros de entretenimiento",d:"Espacio para TV, equipos de sonido y almacenamiento cerrado."},
+ {n:"Mueble de TV flotante",l:"Muebles de TV",d:"Se instala en la pared y deja el piso libre. Diseño liviano."},
+ {n:"Mueble de TV de piso",l:"Muebles de TV",d:"Base firme con cajones o puertas para guardar lo que necesites."},
+ {n:"Centro de mesa",l:"Centros de mesa",d:"Mesa auxiliar para sala en madera o acabado a elección."},
+ {n:"Mesa de noche",l:"Mesas de noche",d:"Con cajón y estante, para flotar en pared o con patas."},
+ {n:"Mueble de lavamanos de sobreponer",l:"Lavamanos de sobreponer",d:"Mueble para baño con lavamanos encima, resistente a la humedad."},
+ {n:"Recibidor de sala",l:"Recibidores de sala",d:"Mueble de entrada con espacio para llaves, zapatos y decoración."},
+ {n:"Closet de piso a techo",l:"Closets",d:"Aprovecha toda la altura de la pared, con entrepaños, barras y cajones."},
+ {n:"Closet con puertas corredizas",l:"Closets",d:"Ideal para espacios pequeños: las puertas no ocupan espacio al abrirse."},
+ {n:"Closet con cajonera y zapatero",l:"Closets",d:"Organiza ropa, zapatos y accesorios en un solo mueble a tu medida."}
+];
+var $=function(id){return document.getElementById(id)};
+var actual="";
+var chips=$("chips");
+["Todos"].concat(LINEAS).forEach(function(l){
+  var b=document.createElement("button");b.type="button";b.className="chip";b.textContent=l;
+  b.setAttribute("aria-pressed",l==="Todos"?"true":"false");
+  b.addEventListener("click",function(){actual=l==="Todos"?"":l;
+    Array.prototype.forEach.call(chips.children,function(c){c.setAttribute("aria-pressed",c===b?"true":"false")});pintar()});
+  chips.appendChild(b);
+});
+LINEAS.forEach(function(l){var o=document.createElement("option");o.textContent=l;$("linea").appendChild(o)});
+$("linea").appendChild(Object.assign(document.createElement("option"),{textContent:"Otro mueble a medida"}));
+
+function pintar(){
+  var r=DATOS.filter(function(d){return !actual||d.l===actual});
+  $("lista").innerHTML=r.map(function(d){
+    var msg=encodeURIComponent("Hola ArtIdeas, quiero cotizar: "+d.n);
+    return '<article class="card"><div class="thumb"><svg viewBox="0 0 24 24" aria-hidden="true">'+ICONOS[d.l]+'</svg></div>'+
+      '<div class="body"><span class="tag">'+d.l+'</span><h3>'+d.n+'</h3><p>'+d.d+'</p>'+
+      '<a class="btn" href="https://wa.me/'+WHATSAPP+'?text='+msg+'" target="_blank" rel="noopener">Cotizar este mueble</a></div></article>';
+  }).join("");
+}
+$("form").addEventListener("submit",function(e){
+  e.preventDefault();
+  var n=$("nombre").value.trim();
+  if(!n){$("aviso").textContent="Escribe tu nombre para continuar.";$("nombre").focus();return}
+  var t="Hola ArtIdeas, soy "+n+". Me interesa: "+$("linea").value+". "+$("mensaje").value;
+  window.open("https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(t),"_blank","noopener");
+  $("aviso").textContent="Abrimos WhatsApp con tu mensaje.";
+});
+pintar();
+</script>
+</body>
+</html>
